@@ -2,26 +2,56 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  touch-action: none;
+  background-color: #111;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  /* Adjust font sizes for mobile */
+  p {
+    font-size: 14px;
+  }
+
+  p > a:first-of-type {
+    font-size: 18px;
+  }
+
+  span {
+    font-size: 10px;
+  }
+}
+
 p {
-  margin: 0 0;
+  margin: 0;
   position: absolute;
-  font: 16px Verdana;
+  font: 16px Verdana, sans-serif;
   color: #eee;
   height: 25px;
-  top: calc(100vh - 30px);
+  bottom: 10px;
+  left: 10px;
   text-shadow: 0 0 2px white;
+  z-index: 100;
 }
+
 p a {
   text-decoration: none;
   color: #aaa;
 }
+
 span {
   font-size: 11px;
 }
+
 p > a:first-of-type {
   font-size: 20px;
-}
-body {
-  overflow: hidden;
 }
